@@ -147,3 +147,17 @@ alter table transaction_info drop column location;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
