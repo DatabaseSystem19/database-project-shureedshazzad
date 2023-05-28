@@ -81,16 +81,16 @@ insert into train_schedule_info(route_id,train_id,running_days)values(10004,1010
 insert into train_schedule_info(route_id,train_id,running_days)values(10005,1011,'Saturday,Sunday,Monday,Tuesday,Wednesday,Thursday,Friday');
 
 
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15001,2471,DATE '2023-4-5','Bkash',50);
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15002,2472,DATE '2023-4-5','Bkash',200);
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15003,2473,DATE '2023-4-6','Bkash',500);
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15004,2474,DATE '2023-4-6','Bkash',300);
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15005,2475,DATE '2023-4-9','Bkash',3000);
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15006,2476,DATE '2023-4-9','Bkash',2000);
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15007,2477,DATE '2023-4-9','Bkash',3200);
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15008,2478,DATE '2023-4-13','Bkash',3200);
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15009,2479,DATE '2023-4-13','Bkash',3200);
-insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15010,2480,DATE '2023-4-17','Bkash',2400);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15001,2471,DATE '2023-4-5','Bkash',20);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15002,2472,DATE '2023-4-5','Bkash',50);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15003,2473,DATE '2023-4-6','Bkash',200);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15004,2474,DATE '2023-4-6','Bkash',650);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15005,2475,DATE '2023-4-9','Bkash',600);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15006,2476,DATE '2023-4-9','Bkash',5400);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15007,2477,DATE '2023-4-9','Bkash',2800);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15008,2478,DATE '2023-4-13','Bkash',3600);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15009,2479,DATE '2023-4-13','Bkash',4400);
+insert into transaction_info(transaction_id,ticket_id,transaction_date,payment_method,transaction_amount)values(15010,2480,DATE '2023-4-17','Bkash',2700);
 
 --find passenger_info from passenger_table using transaction_id in transaction_info
 select first_name, phone_number from passenger_info where passenger_id in (select passenger_id from ticket_info where ticket_id in(select ticket_id from transaction_info where transaction_id=15001));
